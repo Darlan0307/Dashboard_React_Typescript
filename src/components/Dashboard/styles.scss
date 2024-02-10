@@ -1,18 +1,26 @@
-#togle-theme{
+.togle-theme{
   position: absolute;
   border: none;
   background-color: transparent;
   top: -1.5em;
-  left: 1em;
-  font-size: 20px;
+  right: 2em;
+  font-size: 24px;
   cursor: pointer;
+}
+
+.moon{
+  color: #24adf3;
+}
+
+.sun{
+  color: #f7621c;
 }
 
 .container{
   min-height: 100vh;
   display: grid;
   place-content: center;
-  padding: 2em 20px;
+  padding: 3em 20px;
 }
 
 .dashboard{

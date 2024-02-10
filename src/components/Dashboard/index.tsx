@@ -2,6 +2,7 @@ import { UseTheme } from "../../context/ThemeContext"
 import InfoDashboard from "../InfoDashboard"
 import Navbar from "../Navbar"
 import './styles.scss'
+import { FaSun,FaMoon } from "react-icons/fa";
 
 const Dashboard = () => {
 
@@ -12,9 +13,13 @@ const Dashboard = () => {
       <main className={`dashboard ${isDark ? 'dashboard-dark' : 'dashboard-light'}`}>
         <Navbar/>
         <InfoDashboard/>
-        <button id="togle-theme"
+       
+        <button
         onClick={togleTheme}
-        >🌞</button>
+        className={`togle-theme ${isDark ? 'moon' : 'sun'}`}
+        >
+          {isDark ?<FaMoon/> : <FaSun/>}
+        </button>
       </main>
       <div className={`body ${isDark ? 'body-dark' : 'body-light'}`}></div>
     </div>

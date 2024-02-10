@@ -9,6 +9,9 @@ import { IoMdContacts } from "react-icons/io";
 import { RiEyeCloseFill } from "react-icons/ri";
 import { BiSolidBinoculars } from "react-icons/bi";
 import { CiMenuKebab } from "react-icons/ci";
+import { TiThMenu } from "react-icons/ti";
+import { IoCloseCircleSharp } from "react-icons/io5";
+import { useEffect, useRef, useState } from 'react';
 
 const linksHome = [
   {
@@ -87,10 +90,47 @@ const linksAnalytics = [
 
 const Navbar = () => {
 
+  const ref = useRef<HTMLDivElement | null>(null)
+  const [isMobile,setIsMobile] = useState(false)
+  const [isMenuOpen,setIsMenuOpen] = useState(false)
   const {isDark} = UseTheme()
 
+  useEffect(()=>{
+    function handleResize(){
+      if(window.innerWidth < 1100){
+        if(ref.current){
+          ref.current.classList.add('navbar-mobile')
+          setIsMobile(true)
+        }
+      }else{
+        if(ref.current){
+          ref.current.classList.remove('navbar-mobile')
+          setIsMobile(false)
+        }
+      }
+    }
+
+    handleResize()
+
+    return ()=> window.removeEventListener('resize',handleResize)
+  })
+
+  const togleWidthMenu = () =>{
+    ref.current?.classList.toggle('open')
+    setIsMenuOpen(prevState => !prevState)
+  }
+
   return (
-    <div className={`navbar ${isDark ? 'navbar-dark' : 'navbar-light'}`}>
+    <div className={`navbar ${isDark ? 'navbar-dark' : 'navbar-light'}`} ref={ref}>
+
+      {isMobile && (
+        <button 
+        className={`menu ${isDark ? 'menu-dark' : 'menu-light'}`}
+        onClick={togleWidthMenu}
+        >
+          {!isMenuOpen ? <TiThMenu/> : <IoCloseCircleSharp/>}
+        </button>
+      )}
       <section className='profile'>
         <div> 
           <span>NS</span>
