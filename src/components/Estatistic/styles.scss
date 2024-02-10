@@ -1,0 +1,57 @@
+.estatistic{
+  display: flex;
+  background-color: #ffffff;
+  padding: 15px 20px;
+  align-items: center;
+  gap: 2em;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  border-radius: 15px;
+  .card{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    width: 150px;
+    p{
+     color: #7c7d81;;
+    }
+
+    h2{
+      color: black;
+    }
+
+    div{
+      display: flex;
+      gap: .5em;
+      align-items: center;
+
+      svg{
+        color: #00b273;
+      }
+      span{
+        color: #00b273;
+      }
+    }
+
+    .negative{
+      svg{
+        color: #ff5642;
+      }
+      span{
+        color: #ff5642;
+      }
+    }
+  }
+}
+
+.dark{
+  background-color: #202125;
+
+  .card{
+    h2{
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.info-dashboard{
+  width: 100%;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+
+
+  .container-graphs{
+    display: flex;
+    gap: 1.5em;
+
+    .teste-1,.teste-2{
+      background-color: #333;
+    }
+
+    .teste-1{
+      width: 65%;
+      height: 300px;
+    }
+
+    .teste-2{
+      width: 35%;
+      height: 250px;
+    }
+  }
+}
