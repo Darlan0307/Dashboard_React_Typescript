@@ -2,16 +2,30 @@
   width: 100%;
   max-width: 320px;
   padding: 20px;
-  transition: background .5s ease, opacity .2s linear;
+  transition: all .5s ease, opacity .2s linear;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
   .profile{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     div{
-      padding: 10px;
-      border-radius: 50%;
-      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      span{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: #00b273;
+        display: grid;
+        place-content: center;
+        color: white;
+        font-weight: bold;
+      }
+      
     }
 
     p{
@@ -37,17 +51,60 @@
       cursor: pointer;
     }
   }
+
+  .links-home{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    transition: all .5s ease, opacity .2s linear;
+    .btn-link{
+      display: flex;
+      gap: 2em;
+      padding: 8px;
+      align-items: center;
+      background-color: transparent;
+      border: none;
+      transition: all .5s ease, opacity .2s linear;
+      cursor: pointer;
+      border-radius: 10px;
+      svg{
+        color: #8b8787;
+        font-size: 20px;
+      }
+
+      p{
+        font-size: 16px;
+        font-weight: bold;
+      }
+      
+      span{
+        background-color: #ff5642;
+        padding: 5px;
+        border-radius: 5px;
+        color: #f6f7f9;
+        font-weight: bold;
+        width: 30px;
+      }
+
+      &:hover{
+        background-color: #01b075;
+        svg,p{
+          color: white;
+        }
+      }
+    }
+  }
+
+  .subtitle{
+    color: #7c7d81;
+    font-size: 17px;
+  }
 }
 
 .navbar-dark{
   background-color: #202125;
 
   .profile{
-    div{
-      background-color: #00b273;
-      color: white;
-    }
-
     p{
       color: white;
     }
@@ -57,16 +114,25 @@
       color: white;
     }
   }
+
+  .info-navbar{
+    p{
+      color: #f6f7f9;
+    }
+
+    button{
+      background-color:#7c7d81;
+      svg{
+        color: white;
+      }
+    }
+  }
 }
 
 .navbar-light{
   background-color: #ffffff;
-
+  border-right: 1px solid rgba(0, 0, 0, 0.342);
   .profile{
-    div{
-      background-color: #01b075;
-      color: white;
-    }
 
     p{
       color: black;
@@ -75,6 +141,87 @@
     button{
       background-color: #f6f7f9;
       color: #333;
+    }
+  }
+
+  .info-navbar{
+    p{
+      color: black;
+    }
+
+    button{
+      background-color: #f6f7f9;
+      svg{
+        color: black;
+      }
+    }
+  }
+}
+
+.links-home-dark{
+  .btn-link{  
+    p{
+      color: #ffffff;
+    }
+  }
+}
+
+.links-home-light{
+  .btn-link{
+    p{
+      color: #333;
+    }
+  }
+}
+
+.info-navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  div{
+    
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    span{
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      background-color: #00b273;
+      border-radius: 50%;
+      display: grid;
+      place-content: center;
+    }
+  }
+
+  p{
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    align-self: flex-start;
+    &::after{
+      content: 'ver. 0.234';
+      position: absolute;
+      bottom: -1.2em;
+      left: 0;
+      color: #7c7d81;
+      font-size: 15px;
+      align-self: flex-start;
+    }
+  }
+
+  button{
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30px;
+    display: grid;
+    place-content: center;
+    svg{
+      transform: rotate(90deg);
+      font-size: 25px;
     }
   }
 }
