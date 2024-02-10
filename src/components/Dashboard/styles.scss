@@ -1,3 +1,13 @@
+#togle-theme{
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  top: -1.5em;
+  left: 1em;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 .container{
   min-height: 100vh;
   display: grid;
@@ -6,7 +16,11 @@
 
 .dashboard{
   width: 90vw;
+  max-width: 1400px;
+  min-height: 90vh;
   transition: background .5s ease, opacity .2s linear;
+  display: flex;
+  position: relative;
 }
 
 .dashboard-dark{
@@ -16,7 +30,6 @@
 .dashboard-light{
   background-color: #fcfafd;
 }
-
 
 .body{
   position: fixed;

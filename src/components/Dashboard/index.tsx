@@ -1,4 +1,6 @@
 import { UseTheme } from "../../context/ThemeContext"
+import InfoDashboard from "../InfoDashboard"
+import Navbar from "../Navbar"
 import './styles.scss'
 
 const Dashboard = () => {
@@ -8,10 +10,11 @@ const Dashboard = () => {
   return (
     <div className="container">
       <main className={`dashboard ${isDark ? 'dashboard-dark' : 'dashboard-light'}`}>
-        <h1>teste</h1>
-        <button
+        <Navbar/>
+        <InfoDashboard/>
+        <button id="togle-theme"
         onClick={togleTheme}
-        >TEASDASTEA</button>
+        >🌞</button>
       </main>
       <div className={`body ${isDark ? 'body-dark' : 'body-light'}`}></div>
     </div>

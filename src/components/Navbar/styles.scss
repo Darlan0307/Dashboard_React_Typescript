@@ -1,0 +1,80 @@
+.navbar{
+  width: 100%;
+  max-width: 320px;
+  padding: 20px;
+  transition: background .5s ease, opacity .2s linear;
+  .profile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div{
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    p{
+      font-size: 18px;
+      font-weight: bold;
+      position: relative;
+      align-self: flex-start;
+      &::after{
+        content: 'Darlan0307';
+        position: absolute;
+        bottom: -1.2em;
+        left: 0;
+        color: #7c7d81;
+        font-size: 15px;
+      }
+    }
+
+    button{
+      border: none;
+      font-size: 20px;
+      padding: 1px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+.navbar-dark{
+  background-color: #202125;
+
+  .profile{
+    div{
+      background-color: #00b273;
+      color: white;
+    }
+
+    p{
+      color: white;
+    }
+
+    button{
+      background-color: #00b273;
+      color: white;
+    }
+  }
+}
+
+.navbar-light{
+  background-color: #ffffff;
+
+  .profile{
+    div{
+      background-color: #01b075;
+      color: white;
+    }
+
+    p{
+      color: black;
+    }
+
+    button{
+      background-color: #f6f7f9;
+      color: #333;
+    }
+  }
+}
