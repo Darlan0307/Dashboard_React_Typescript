@@ -64,11 +64,35 @@
         }
 
         span{
-          color: black;
+          color: black ;
           font-size: 20px;
           font-weight: bold;
           
         }
+      }
+    }
+
+    .column-3{
+      transition: all .5s ease, opacity .2s linear;
+      background-color: #ffffff;
+      border-radius: 15px;
+      padding: 20px;
+      position: relative;
+
+      h3{
+        color: black;
+        position: absolute;
+        top: 2em;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      p{
+        color: #7c7d81;
+        font-size: 18px;
+        position: absolute;
+        top: 1em;
+        right: 1em;
       }
     }
 
@@ -79,6 +103,10 @@
         span{
           color: white;
         }
+      }
+
+      h3{
+        color: #ffffff;
       }
     }
   }

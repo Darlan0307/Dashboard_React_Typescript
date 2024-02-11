@@ -5,7 +5,7 @@
   transition: all .5s ease, opacity .2s linear;
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 2em;
   position: relative;
   .profile{
     display: flex;
@@ -58,7 +58,7 @@
   .links-home{
     display: flex;
     flex-direction: column;
-    gap: .5em;
+    gap: 1em;
     transition: all .5s ease, opacity .2s linear;
     .btn-link{
       display: flex;

@@ -144,7 +144,9 @@ const Navbar = () => {
 
       <nav className={`links-home ${isDark ? 'links-home-dark' : 'links-home-light'}`}>
         {linksHome.map((link) => (
-          <button key={link.id} className='btn-link'>
+          <button key={link.id} className='btn-link'
+          onClick={togleWidthMenu}
+          >
             {link.icon}
             <p>{link.name}</p>
             {link.label !== 0 ? <span>{link.label}</span> : null}
@@ -156,7 +158,9 @@ const Navbar = () => {
 
       <nav className={`links-home ${isDark ? 'links-home-dark' : 'links-home-light'}`}>
         {linksPodcast.map((link) => (
-          <button key={link.id} className='btn-link'>
+          <button key={link.id} className='btn-link'
+          onClick={togleWidthMenu}
+          >
             {link.icon}
             <p>{link.name}</p>
             {link.label !== 0 ? <span>{link.label}</span> : null}
@@ -168,7 +172,9 @@ const Navbar = () => {
 
       <nav className={`links-home ${isDark ? 'links-home-dark' : 'links-home-light'}`}>
         {linksAnalytics.map((link) => (
-          <button key={link.id} className='btn-link'>
+          <button key={link.id} className='btn-link'
+          onClick={togleWidthMenu}
+          >
             {link.icon}
             <p>{link.name}</p>
             {link.label !== 0 ? <span>{link.label}</span> : null}

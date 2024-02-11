@@ -53,6 +53,7 @@ const GraphBar = () => {
           filter:  `drop-shadow( 0px 0px 5px rgba(0, 250, 150,0.70) )`,
         }
       }
+      animationEasing="ease-in-out"
       />
     </BarChart>
   );
