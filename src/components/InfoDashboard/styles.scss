@@ -8,20 +8,39 @@
 
   .container-graphs{
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     gap: 1.5em;
 
-    .teste-1,.teste-2{
+    @media (max-width:800px){
+      &{
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    
+
+    .column-1{
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      padding: 10px;
+      border-radius: 15px;
+      align-items: center;
+      transition: all .5s ease, opacity .2s linear;
+    }
+
+    .column-2{
+      width: 35%;
+      height: 250px;
       background-color: #333;
     }
 
-    .teste-1{
-      width: 65%;
-      height: 300px;
-    }
-
-    .teste-2{
-      width: 35%;
-      height: 250px;
+    .dark{
+      background-color: #202125;
     }
   }
 }
+

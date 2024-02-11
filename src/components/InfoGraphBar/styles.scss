@@ -1,0 +1,36 @@
+.info-graph{
+  align-self: flex-start;
+  margin-left: 1em;
+  transition: all .5s ease, opacity .2s linear;
+  .subtitle{
+    color: #8b8787;
+  }
+
+  h2{
+    color: black;
+  }
+
+  div{
+    display: flex;
+    align-items: center;
+    gap: .5em;
+
+    svg{
+      color: #00b273;
+    }
+
+    p{
+      color: #00b273;
+    }
+
+    span{
+      color: #8b8787;
+    }
+  }
+}
+
+.dark{
+  h2{
+    color: white;
+  }
+}
