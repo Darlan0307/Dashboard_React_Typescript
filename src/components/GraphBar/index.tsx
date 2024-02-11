@@ -9,10 +9,10 @@ const GraphBar = () => {
     query: '(min-width: 721px)',
   });
   const isTabletOrMobile = useMediaQuery({
-    query: '(min-width: 401px)',
+    query: '(min-width: 501px)',
   });
   const isMobile = useMediaQuery({
-    query: '(max-width: 400px)',
+    query: '(max-width: 500px)',
   });
 
   useEffect(() => {
@@ -46,7 +46,14 @@ const GraphBar = () => {
       )}
       <Tooltip />
       
-      <Bar dataKey="value" fill="#00b273" barSize={30}/>
+      <Bar dataKey="value" fill="#00b273" barSize={30}
+      animationDuration={3000}
+      style={
+        {
+          filter:  `drop-shadow( 0px 0px 5px rgba(0, 250, 150,0.70) )`,
+        }
+      }
+      />
     </BarChart>
   );
 };

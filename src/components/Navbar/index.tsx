@@ -121,16 +121,18 @@ const Navbar = () => {
   }
 
   return (
-    <div className={`navbar ${isDark ? 'navbar-dark' : 'navbar-light'}`} ref={ref}>
 
+    <>
       {isMobile && (
-        <button 
-        className={`menu ${isDark ? 'menu-dark' : 'menu-light'}`}
-        onClick={togleWidthMenu}
-        >
-          {!isMenuOpen ? <TiThMenu/> : <IoCloseCircleSharp/>}
-        </button>
-      )}
+      <button 
+      className={`menu ${isDark ? 'menu-dark' : 'menu-light'}`}
+      onClick={togleWidthMenu}
+      >
+        {!isMenuOpen ? <TiThMenu/> : <IoCloseCircleSharp/>}
+      </button>
+    )}
+
+    <div className={`navbar ${isDark ? 'navbar-dark' : 'navbar-light'}`} ref={ref}>
       <section className='profile'>
         <div> 
           <span>NS</span>
@@ -185,6 +187,7 @@ const Navbar = () => {
         <button> <CiMenuKebab/> </button>
       </section>
     </div>
+    </>
   )
 }
 
